@@ -36,7 +36,7 @@ func (s *server) GetHandler() http.Handler {
 	//xmlrpcCodec.RegisterAlias("get_keyword_documentation","Service.GetKeywordDocumentation")
 	//xmlrpcCodec.RegisterAlias("get_keyword_types","Service.Get_keyword_types")
 	RPC.RegisterCodec(xmlrpcCodec, "text/xml")
-	_ = RPC.RegisterService(s.service, "")
+	RPC.RegisterService(s.service, "")
 	return RPC
 }
 
